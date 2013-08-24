@@ -1,3 +1,18 @@
+<!--
+	
+	lhur 
+	
+	LocalHost Utility Research
+	ver. 0.1
+	
+	Created by 
+	Andre Rufo, www.orangedropdesign.com
+	
+	Project page 
+	https://github.com/andrearufo/lhur
+
+-->
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -10,6 +25,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Andrea Rufo, www.orangedropdesign.com" />
         
+    <!-- 
+		the css style 
+	-->
+	
     <style type="text/css">
     
     *{
@@ -94,19 +113,27 @@
 </head>
 
 <body>
-
+	
+	<!-- 
+		the search form 
+	-->
+	
 	<form>
-		<input type="text" id="sito" name="s" autocomplete="off" placeholder="Cerca tra i siti"/>
+		<input type="text" id="sito" name="s" autocomplete="off" placeholder="Search among the elements..."/>
 	</form>
 	
-	<p>Elementi trovati: <span class="counter"></span></p>
+	<p>Items found: <span class="counter"></span></p>
+	
+	<!-- 
+		the list of items 
+	-->
 
 	<ul class="container">
 	
 		<?php	
 			
 		$dirname = './';	//starting dir
-		$n = 0;				//strating count
+		$n = 0;				//starting count
 		
 			if(file_exists($dirname)){
 				$handle = opendir($dirname);
@@ -119,6 +146,7 @@
 							
 							if(isset($_GET['s']) && $_GET['s'] != ''){
 								
+								//results for the search
 								if(strstr($file, $_GET['s'])){									
 									$info = stat($file);
 									echo '<li class="'.$file.'">
@@ -136,6 +164,7 @@
 								
 							}else{
 								
+								//all the items
 								$info = stat($file);
 								echo '<li title="'.$file.'">
 									<a href="'.$dirname.$file.'">
@@ -152,9 +181,7 @@
 				endwhile;
 				
 				//redirect for the unique result
-				if($n == 1){
-					echo '<meta http-equiv="refresh" content="0; url='.$dirname.$url.'">';
-				}
+				if($n == 1) echo '<meta http-equiv="refresh" content="0; url='.$dirname.$url.'">';
 				
 				$handle = closedir($handle);
 			}
@@ -163,7 +190,15 @@
 		
 	</ul>
 	
+	<!-- 
+		localhost phpMyAdmin link 
+	-->
+	
 	<p><a href="localhost/phpMyAdmin/?lang=en-iso-8859-1&language=English">Launch phpMyAdmin on localhost</a></p>
+	
+	<!-- 
+		the scripts 
+	-->
 	
     <script src="http://code.jquery.com/jquery.js"></script>
         
