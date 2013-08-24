@@ -24,7 +24,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Andrea Rufo, www.orangedropdesign.com" />
-        
+    <meta name="robot" content="noindex, nofollow" />
+    
     <!-- 
 		the css style 
 	-->
