@@ -6,7 +6,7 @@
 
 [Download the last version of the script](https://github.com/andrearufo/lhur/archive/master.zip "Download lhur from GitHub") and copy or upload to your main folder of localhost webserver (for example the *Site* folder on Mac or the *dev* url on your site).
 
-The page is really simple and you can customize all you whant.
+The page is really simple and you can customize all you want.
 
 ###The list of items###
 
