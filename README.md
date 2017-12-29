@@ -12,7 +12,7 @@ It's **responsive**.
 
 [Download the last version of the script](https://github.com/andrearufo/lhur/archive/master.zip "Download lhur from GitHub") and copy or upload to your main folder of localhost webserver (for example the *Site* folder on Mac or the *dev* url on your site).
 
-### The list of items###
+### The list of items
 
 First of all the script list all the items in the main folder (or in the folder specified in the script) in a grid of elements whit the folder name and the date of last modification.
 
